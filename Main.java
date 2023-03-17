@@ -12,7 +12,6 @@ public class Main {
     public static final JPanel ACTION_PANEL = new JPanel();
     public static final JLabel TITLE = new JLabel("Планировщик");
     public static final JLabel TITLE1 = new JLabel("Текущие дела");
-
     public static final ArrayList<JLabel> TASK_LIST = new ArrayList<>();
     public static void main(String[] args) {
         @Override
