@@ -10,20 +10,18 @@ public class Process implements Compare<Process> {
     private int priority;
     private static int count;
 
-    public Process(String subject, String author, int priority, String endOfTask) {
+    public Process(String text, String author, String date, int priority) {
         this.text = text;
         this.author = author;
         this.date = LocalDate.now().format(DateTimeFormatter.ofPattern("dd:MM:yyyy"));
         this.priority = priority;
     }
-
-    public Process(String subject) {
+    public Process(String text) {
         this.text = text;
         this.date = LocalDate.now().format(DateTimeFormatter.ofPattern("dd:MM:yyyy"));
         this.author = "новый автор";
         this.priority = 0;
     }
-
     public Process() {
         this.date = LocalDate.now().format(DateTimeFormatter.ofPattern("dd:MM:yyyy"));
         this.text = "Новая запись: ";
@@ -35,19 +33,15 @@ public class Process implements Compare<Process> {
     public String getText() {
         return text;
     }
-
     public void setText(String text) {
         this.text = text;
     }
-
     public String getAuthor() {
         return author;
     }
-
     public void setAuthor(String author) {
         this.author = author;
     }
-
     public String getDate() {
         return date;
     }
@@ -63,11 +57,9 @@ public class Process implements Compare<Process> {
     public int getPriorCode() {
         return priority;
     }
-
     public void setPriority(int priority) {
         this.priority = priority;
     }
-
     @Override
     public String toString() {
         return getText() + ", автор: " + getAuthor() +
